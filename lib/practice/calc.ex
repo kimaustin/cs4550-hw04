@@ -5,13 +5,16 @@ defmodule Practice.Calc do
   end
 
   def calc(expr) do
+
+    Tuple.to_list(Code.eval_string(expr, []))
+    |> hd
+
     # This should handle +,-,*,/ with order of operations,
     # but doesn't need to handle parens.
-    expr
-    |> String.split(~r/\s+/)
-    |> hd
-    |> parse_float
-    |> :math.sqrt()
+    # expr
+    # |> String.split(~r/\s+/)
+    # |> hd
+    # |> parse_float
 
     # Hint:
     # expr
@@ -21,4 +24,5 @@ defmodule Practice.Calc do
     # |> reverse to prefix
     # |> evaluate as a stack calculator using pattern matching
   end
+  
 end

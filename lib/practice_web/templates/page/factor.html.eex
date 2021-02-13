@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="column">
+    <p><%= link "← go back", to: "/" %></p>
+    <h2>Prime Factor Results</h2>
+
+    <p><%= @x %>'s factors are: <%= Enum.map(@y, fn(x) -> Integer.to_string(x) <> " " end) %></p>
+  </div>
+</div>
+
