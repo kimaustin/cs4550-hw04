@@ -3,7 +3,7 @@ server {
     listen [::]:80;
 
     # TODO: DONE(?) ->This should be your server name.
-    server_name hw03.wbdbvaustinkim.com;
+    server_name hw04.wbdbvaustinkim.com;
 
     location / {
         proxy_pass http://localhost:4790;
